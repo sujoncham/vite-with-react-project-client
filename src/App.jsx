@@ -1,8 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Counter from "./components/Counter";
 import Header from "./components/Header";
 import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import NoPage from "./pages/NoPage";
 
 // npm create vite
 // npm i
@@ -11,14 +13,13 @@ import Blogs from "./pages/Blogs";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
+    <div className="container mx-auto px-10">
       <Header />
       <Routes>
         <Route>
-          <Route path="/" element={<Counter />} />
+          <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
