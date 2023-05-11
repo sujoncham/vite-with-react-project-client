@@ -1,12 +1,10 @@
 import React from "react";
-import Counter from "../components/Counter";
-import TodoList from "../components/TodoList";
+import Blogs from "./Blogs";
 
 const Home = () => {
   return (
-    <div>
-      <Counter />
-      <TodoList />
+    <div className="container mx-auto px-10">
+      <Blogs />
     </div>
   );
 };

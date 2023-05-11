@@ -9,7 +9,7 @@ const TodoList = () => {
     inputRef.current.value = "";
   };
   return (
-    <div>
+    <div className="py-10">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -25,7 +25,9 @@ const TodoList = () => {
       </form>
       <div>
         {lists.map((list, index) => (
-          <div key={index}>{list}</div>
+          <div key={index}>
+            <span>{list}</span> <button>X</button> <button>edit</button>
+          </div>
         ))}
       </div>
     </div>
